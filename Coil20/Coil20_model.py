@@ -12,7 +12,7 @@ class Coil20_25(nn.Module):
     def __init__(self,test=False):
         super(Coil20_25, self).__init__()
 
-        self.encoder = Conv_layer(in_planes=1, out_planes=1, kernel_size=3, stride=2,padding=1)
+        self.encoder = nn.Convd2d(in_planes=1, out_planes=1, kernel_size=3, stride=2,padding=1)
         
         self.decoder_conv1 =nn.ConvTranspose2d(1, 1, 3, stride=2,padding=1)
         self.Relu= nn.ReLU(True)
